@@ -21,7 +21,7 @@ export default class App extends React.Component {
 	componentDidMount() {
         axios.get('http://localhost:4000/inputs/')
             .then(response => {
-                this.setState({ inputs: response.data });
+                this.setState({inputs: response.data });
             })
             .catch(function (error){
                 console.log(error);
@@ -33,7 +33,8 @@ export default class App extends React.Component {
 			console.log("here id: " + id);
 			const output = this.state.inputs.find(x => x._id === id);
 			console.log(output);
-			this.setState({outputText: JSON.stringify(output.input_output)});
+			const outputString = JSON.stringify(output.input_output) || "No tuples available!";
+			this.setState({outputText: outputString});
 		};
 	    return(
 	      <div>
