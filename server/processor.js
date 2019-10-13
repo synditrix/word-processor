@@ -1,6 +1,7 @@
 const processText = (text) => {
-	const lowerCaseText = text.toLowerCase();
-	const textArray = lowerCaseText.split(" ");
+	const cleanedText = text.toLowerCase().replace(/[^0-9A-Za-z ]/gi, '').trim();
+	console.log(cleanedText);
+	const textArray = cleanedText.split(" ");
 	const output = {};
 	for (let i = 0; i < textArray.length - 1; i++) {
 		const first = textArray[i];

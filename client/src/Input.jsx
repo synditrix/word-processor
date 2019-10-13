@@ -5,7 +5,6 @@ class Input extends React.Component {
 	render() {
 		const inputText = this.props.inputText;
 		const inputId = this.props.id;
-		console.log(inputId);
 		const handleClick = () => {
 			this.props.clickInput(inputId);
 		}

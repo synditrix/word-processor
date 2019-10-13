@@ -6,7 +6,6 @@ import './Inputs.css';
 
 class InputList extends React.Component {
 	render() {
-		console.log(this.props.inputs);
 		const inputComponents = this.props.inputs.map(i =>
 				 <Input key={i._id} id={i._id} inputText={i.input_text} clickInput={this.props.clickInput} />
 				);

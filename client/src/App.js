@@ -28,10 +28,9 @@ export default class App extends React.Component {
 
 	render() {
 		const clickInput = id => {
-			console.log("here id: " + id);
 			const output = this.state.inputs.find(x => x._id === id);
-			console.log(output);
-			const outputString = JSON.stringify(output.input_output) || "No tuples available!";
+			const cleanedOutputString = JSON.stringify(output.input_output).replace(/,/g, " ").slice(1, -1);
+			const outputString = cleanedOutputString || "No tuples available!";
 			this.setState({outputText: outputString});
 		};
 	    return(
