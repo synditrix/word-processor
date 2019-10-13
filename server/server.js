@@ -37,15 +37,22 @@ inputRoutes.route('/:id').get(function(req, res) {
 });
 
 inputRoutes.route('/add').post(function(req, res) {
+	console.log(req.body);
 	req.body.input_output = processor.processText(req.body.input_text);
     let input = new Input(req.body);
+    console.log(input);
     input.save()
         .then(todo => {
             res.status(200).json({'input': 'input added successfully'});
+            console.log("this worked");
         })
         .catch(err => {
             res.status(400).send('adding new input failed');
+            console.log("this didn't work");
+            console.log(res);
+            res.json(err);
         });
+        console.log("finished");
 });
 
 app.use('/inputs', inputRoutes);

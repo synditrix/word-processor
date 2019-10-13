@@ -6,8 +6,6 @@ import InputForm from './Form.jsx';
 import InputList from './Inputs.jsx';
 import Output from './Output.js';
 
-const outputText = "Fizz buzz";
-
 export default class App extends React.Component {
 
 	constructor(props) {
