@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import InputList from './InputList';
 
-it('renders App without crashing', () => {
+it('renders InputList without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<InputList />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
