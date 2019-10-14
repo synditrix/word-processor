@@ -9,10 +9,6 @@ Additionally, the app gives you the option to change the name that is displayed 
 ## Steps to run:
 
 1. Clone the repo at https://github.com/synditrix/word-processor.git. 
-2. Make sure that Node.js and MongoDB are installed in your system. You can check if Node.js is installed on your system by running the command `node -v`. If MongoDB is not installed in your system, call `brew install mongodb`.
-3. Set up the back-end server by calling `cd server`, `npm install` to download all dependencies, and calling `nodemon server`. 
-4. Open up a separate Terminal window. Set up the MongoDB database by calling `mongod`. On a separate Terminal window, call `mongo`, then `use inputs` in order to create an inputs database.
-5. In a separate terminal window, set-up the front-end client by calling `cd client`, `npm install` to download all dependencies, and then `npm start`. 
-6. If you want to clear the database of inputs, call db.dropDatabase() within the Terminal window that was created in step 4. 
-
-The server runs on http://localhost:4000 and the client runs on http://localhost:3000. 
+2. Make sure docker-compose is installed. If not, install it here: https://docs.docker.com/compose/install/
+3. Build the project by calling `sudo docker-compose build` in the root directory of the project. 
+4. After building is complete, call `sudo docker-compose up` in order to run the project. 
