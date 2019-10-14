@@ -10,6 +10,7 @@ services:
       - "4000:4000"
     volumes:
       - ./server:/usr/src/app
+      - /server/node_modules
     depends_on:
       - mongodb
   frontend:
@@ -18,5 +19,6 @@ services:
       - "3000:3000"
     volumes:
       - ./client:/usr/src/app
+      - /client/node_modules
     depends_on:
       - backend
