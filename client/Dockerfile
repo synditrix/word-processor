@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app
 
-RUN npm install && npm install -g nodemon && npm install react-scripts@3.0.1 -g --silent
+RUN npm install && npm install -g nodemon && npm install react-scripts@3.2.0 -g --silent
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
